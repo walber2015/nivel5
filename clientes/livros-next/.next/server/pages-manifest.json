@@ -1,0 +1,8 @@
+{
+  "/_app": "pages/_app.js",
+  "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
+  "/LivroLista": "pages/LivroLista.js",
+  "/LivroDados": "pages/LivroDados.js",
+  "/api/livros": "pages/api/livros.js"
+}

@@ -1,0 +1,35 @@
+<main class="container mt-4">
+    <h2>Catálogo de Livros</h2>
+
+
+    <table class="table ">
+        <thead>
+            <tr class="bg-dark">
+                <th class="text-light font-weight-normal">Título</th>
+                <th class="text-light font-weight-normal">Resumo</th>
+                <th class="text-light font-weight-normal">Editora</th>
+                <th class="text-light font-weight-normal">Autores</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let livro of livros">
+
+                <td class="d-flex flex-column">
+                    {{ livro.titulo }}
+                    <button class="btn btn-danger" (click)="excluir(livro.codigo)">
+                        Excluir
+                    </button>
+                </td>
+                <td>{{ livro.resumo }}</td>
+                <td>{{ obterNome(livro.codEditora) }}</td>
+                <td>
+                    <ul>
+                        <li *ngFor="let autor of livro.autores">{{ autor }}</li>
+                    </ul>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</main>
